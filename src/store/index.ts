@@ -31,6 +31,8 @@ import { ISearchState } from './search/types';
 import { proxyReducer } from './proxy/reducers';
 import { IProxyState } from './proxy/types';
 import localStorageMiddleware from './localStorageMiddleware';
+import { ISiteScriptsState } from './sitescripts/types';
+import { siteScriptsReducer } from './sitescripts/reducers';
 
 export interface IRootState {
   home: IHomeState;
@@ -47,6 +49,7 @@ export interface IRootState {
   fileexplorer: IFileExplorerState;
   search: ISearchState;
   proxy: IProxyState;
+  sitescripts: ISiteScriptsState;
 }
 
 const rootReducer = combineReducers({
@@ -64,6 +67,7 @@ const rootReducer = combineReducers({
   fileexplorer: fileExplorerReducer,
   search: searchReducer,
   proxy: proxyReducer,
+  sitescripts: siteScriptsReducer,
 });
 
 const initializeStore = async () => {
