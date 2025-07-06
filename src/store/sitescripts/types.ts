@@ -5,9 +5,9 @@ export type SiteScriptsActions = ActionType<typeof actions>;
 
 export interface ISiteScript {
   key: string;
-  value: string;
+  title: string;
   description: string;
-  comment: string;
+  scriptValue: string | object;
 }
 
 export interface ISiteScriptsState {

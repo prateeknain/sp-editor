@@ -41,8 +41,8 @@ export async function getAllSiteScripts(dispatch: Dispatch<SiteScriptsActions | 
           // find indexed properties
           if (
             vti_indexedpropertykeys &&
-            vti_indexedpropertykeys.value &&
-            vti_indexedpropertykeys.value.indexOf('|') > -1
+            vti_indexedpropertykeys.title &&
+            vti_indexedpropertykeys.title.indexOf('|') > -1
           ) {
             sitescripts = sitescripts.map((property) => {
               const bytes = [];
